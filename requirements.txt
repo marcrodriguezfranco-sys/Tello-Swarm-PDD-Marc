@@ -1,0 +1,16 @@
+# Core
+numpy>=1.24
+opencv-python>=4.8
+ultralytics>=8.0          # YOLOv8
+
+# Dron (solo si conectas hardware real; FakeTello no lo necesita)
+djitellopy>=2.5
+
+# Modo distribuido (opcional)
+paho-mqtt>=2.0
+
+# Notas:
+# - Python 3.10+ recomendado.
+# - Tkinter viene incluido con Python estándar en Windows/macOS.
+#   En Linux: sudo apt install python3-tk
+# - El modelo yolov8n.pt (~6 MB) se descarga automáticamente la primera vez.
