@@ -117,7 +117,7 @@ Para **2 drones reales a la vez en un PC**, ver [configuración multi-dron real]
 │  nav            │    │                │
 │ _astar_         │    │                │
 │  visibility     │    │                │
-└───────┬────────┘    └──────┬─────────┘
+└───────┬───────────┘    └──────┬─────────┘
         │                     │
         └─────────┬───────────┘
                   │
