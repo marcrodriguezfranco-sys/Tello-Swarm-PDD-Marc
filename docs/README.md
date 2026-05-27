@@ -288,12 +288,16 @@ Tello viejo que no soporta station mode).
 
 ---
 
-## Créditos
+## Créditos y Anexo:
 
 - **Federico Pompeo** — Reconstrucción 3D.
 - **Pedro Fiol** — Tello Interceptor (intercepción autónoma ).
 - **Arnau Martínez** — Searching Tello (búsqueda mono-dron base).
 - **Marc Rodríguez** — Multi-dron, convergencia, A\*, MQTT, RTH.
+
+https://www.google.com/url?q=https://youtu.be/_VPuLkShhwY&sa=D&source=editors&ust=1779874888170564&usg=AOvVaw0f_CWWjI9DXOVGBOUfVhui
+https://www.google.com/url?q=https://youtu.be/u7ULQgY_3qo&sa=D&source=editors&ust=1779874906385968&usg=AOvVaw0E-TdYoEV3BGCXFDlV13BE
+https://www.google.com/url?q=https://youtu.be/8YznvRXAbGc&sa=D&source=editors&ust=1779874924104877&usg=AOvVaw3Is3yHv3G8NSsYZ13mRYOb
 
 **Universitat Politècnica de Catalunya — AEROS**
 *Projecte de Drons — 2026 Q2*
