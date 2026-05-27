@@ -97,46 +97,46 @@ Para **2 drones reales a la vez en un PC**, ver [configuración multi-dron real]
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│ main.py                                                       │
-│ ───────                                                       │
-│ UI Tkinter: 4 tarjetas, mapa zenital, controles globales      │
-│ Wire-up de events Fleet → UI                                  │
+│ main.py                                                      │
+│ ───────                                                      │
+│ UI Tkinter: 4 tarjetas, mapa zenital, controles globales     │
+│ Wire-up de events Fleet → UI                                 │
 └──────────────────┬───────────────────────────────────────────┘
                    │
-        ┌──────────┴──────────┐
-        │                     │
-┌───────▼────────┐    ┌──────▼─────────┐
-│ mission_logic  │    │   mission_v2   │
-│ ──────────────  │    │   ──────────    │
-│ run_drone_      │    │ run_real_drone │
-│  mission        │    │  _vision       │
-│ converge_to     │    │ (YOLO loop)    │
-│ return_to_      │    │                │
-│  origin         │    │                │
-│ execute_manual_ │    │                │
-│  nav            │    │                │
-│ _astar_         │    │                │
-│  visibility     │    │                │
-└───────┬───────────┘    └──────┬─────────┘
-        │                     │
-        └─────────┬───────────┘
+        ┌──────────┴───────────┐
+        │                      │
+┌───────▼──────────┐    ┌──────▼─────────┐
+│ mission_logic    │    │   mission_v2   │
+│ ──────────────   │    │   ──────────   │
+│ run_drone_       │    │ run_real_drone │
+│  mission         │    │  _vision       │
+│ converge_to      │    │ (YOLO loop)    │
+│ return_to_       │    │                │
+│  origin          │    │                │
+│ execute_manual_  │    │                │
+│  nav             │    │                │
+│ _astar_          │    │                │
+│  visibility      │    │                │
+└───────┬──────────┘    └──────┬─────────┘
+        │                      │
+        └─────────┬────────────┘
                   │
         ┌─────────▼──────────┐         ┌─────────────────┐
-        │     fleet.py        │◄────────►   mqtt_bridge   │
-        │     ─────────       │         │   ──────────    │
-        │ Fleet (state)       │         │ paho-mqtt       │
-        │ DroneTracker        │         │ RemoteTello sync│
-        │ DroneState          │         │ Obstáculos +    │
-        │ EventBus (queue)    │         │ target found    │
+        │     fleet.py       │◄────────►   mqtt_bridge   │
+        │     ─────────      │         │   ──────────    │
+        │ Fleet (state)      │         │ paho-mqtt       │
+        │ DroneTracker       │         │ RemoteTello sync│
+        │ DroneState         │         │ Obstáculos +    │
+        │ EventBus (queue)   │         │ target found    │
         └─────────┬──────────┘         └─────────────────┘
                   │
         ┌─────────▼──────────┐
-        │   drone_iface.py    │
-        │  ───────────────    │
-        │ DroneInterface      │
-        │ ├─ RealTello        │  ← djitellopy + cmd_lock
-        │ ├─ FakeTello        │  ← simulación con time.sleep
-        │ └─ RemoteTello      │  ← peer remoto vía MQTT
+        │   drone_iface.py   │
+        │  ───────────────   │
+        │ DroneInterface     │
+        │ ├─ RealTello       │  ← djitellopy + cmd_lock
+        │ ├─ FakeTello       │  ← simulación con time.sleep
+        │ └─ RemoteTello     │  ← peer remoto vía MQTT
         └────────────────────┘
 ```
 
