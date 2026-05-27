@@ -4,16 +4,14 @@ Sistema de control multi-dron para DJI RoboMaster TT / Tello EDU, con búsqueda
 autónoma de objetos, convergencia coordinada, evasión de obstáculos mediante
 A\* sobre grafo de visibilidad y modo distribuido vía MQTT.
 
-Proyecto de la asignatura **Pilotatge de Drons** — *Grado en Ingeniería en
-Tecnologías Aeroespaciales — Universitat Politècnica de Catalunya (AEROS)*.
-Continuación del trabajo `Searching-Tello` de Arnau Martínez, extendido a:
+Proyecto de la asignatura **Projecte de Drons** 
 
 - **Multi-dron coordinado** (hasta 4 drones simultáneos, locales o remotos).
 - **Convergencia automática**: cuando un dron detecta el objetivo, los demás
   navegan hacia él.
 - **Pathfinding A\*** sobre grafo de visibilidad para evitar obstáculos.
 - **Return to Home** directo con esquiva de obstáculos.
-- **Seguridad 3D**: separación vertical determinista por nombre (alpha más
+- **Seguridad 3D**: separación vertical determinista entre los drones  por nombre (alpha más
   alto, delta más bajo).
 - **Modo distribuido**: dos PCs pueden compartir flota mediante MQTT.
 
@@ -67,13 +65,13 @@ python main.py
 
 1. En las 4 tarjetas (`alpha`, `bravo`, `charlie`, `delta`) deja `TYPE = FAKE`
    y pulsa `CONN` en cada una.
-2. Pulsa `↑` en cada tarjeta para que despeguen (a alturas escalonadas:
+2. Pulsa `↑` en cada tarjeta para que despeguen (a alturas escalonadas y vertical_safety=50 en mission_logic:
    alpha=250, bravo=200, charlie=150, delta=100 cm).
 3. Pulsa `ESCOGER OBJETO`, apunta la webcam del portátil a algo (botella,
    teléfono, etc.) durante 50 frames consecutivos.
 4. Pulsa `START`. Los drones empiezan rotation_iteration en sus 4
    direcciones cardinales.
-5. Pulsa `🐛 SIM` en cualquier tarjeta para simular que ese dron detectó
+5. Pulsa ` SIM` en cualquier tarjeta para simular que ese dron detectó
    el objetivo. Los otros 3 convergerán hacia él respetando obstáculos
    y seguridad 3D.
 6. Pulsa `↩ HOME` para volver a casa por la ruta más corta esquivando
@@ -293,9 +291,9 @@ Tello viejo que no soporta station mode).
 ## Créditos
 
 - **Federico Pompeo** — Reconstrucción 3D.
-- **Pedro Fiol** — Tello Interceptor (intercepción autónoma indoor).
+- **Pedro Fiol** — Tello Interceptor (intercepción autónoma ).
 - **Arnau Martínez** — Searching Tello (búsqueda mono-dron base).
 - **Marc Rodríguez** — Multi-dron, convergencia, A\*, MQTT, RTH.
 
 **Universitat Politècnica de Catalunya — AEROS**
-*Pilotatge de Drons — 2026*
+*Projecte de Drons — 2026 Q2*
