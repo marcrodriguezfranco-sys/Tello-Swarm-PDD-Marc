@@ -46,7 +46,7 @@ MIN_FLIGHT_CLEARANCE = 20   # Debe ser < OBSTACLE_MARGIN para que los nav
 #   - MIN_FLIGHT_HEIGHT, MAX_FLIGHT_HEIGHT = límites para ajustes automáticos
 #                        de altitud (cm).
 SAFETY_DISTANCE    = 100
-VERTICAL_SAFETY    = 25
+VERTICAL_SAFETY    = 50
 MIN_FLIGHT_HEIGHT  = 30
 MAX_FLIGHT_HEIGHT  = 300
 
