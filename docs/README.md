@@ -223,41 +223,41 @@ Tello viejo que no soporta station mode).
 ### Layout
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│ TELLO CONTROL CENTER · MULTI                          status │
-├─────────────────────────────────────────────────────────────┤
-│ ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐                              │
-│ │ALPHA│ │BRAVO│ │CHARL│ │DELTA│   ← 4 tarjetas              │
-│ └─────┘ └─────┘ └─────┘ └─────┘                              │
-├─────────────────────────────────────────────────────────────┤
-│ OBJETO | START | REC | MISIÓN                                │
-│ INFO   | DETECT IMG                                          │
-│ DRAW OBS | CLEAR OBS | FULL RESET                            │
-│ MQTT bridge                                                  │
-├──────────────────────┬──────────────────────────────────────┤
-│ LOG                  │   MAPA ZENITAL                        │
-│                      │   ─ trayectorias                      │
-│                      │   ▲ drones (color por slot)           │
-│                      │   ─ obstáculos (naranja)              │
+┌───────────────────────────────────────────────────────────────┐
+│ TELLO CONTROL CENTER · MULTI                          status  │
+├───────────────────────────────────────────────────────────────┤
+│ ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐                               │
+│ │ALPHA│ │BRAVO│ │CHARL│ │DELTA│   ← 4 tarjetas                │
+│ └─────┘ └─────┘ └─────┘ └─────┘                               │
+├───────────────────────────────────────────────────────────────┤
+│ OBJETO | START | REC | MISIÓN                                 │
+│ INFO   | DETECT IMG                                           │ 
+│ DRAW OBS | CLEAR OBS | FULL RESET                             │
+│ MQTT bridge                                                   │
+├──────────────────────┬────────────────────────────────────────┤
+│ LOG                  │   MAPA ZENITAL                         │
+│                      │   ─ trayectorias                       │
+│                      │   ▲ drones (color por slot)            │
+│                      │   ─ obstáculos (naranja)               │
 │                      │   ⊕ target (parpadea si finder)       │
-└──────────────────────┴──────────────────────────────────────┘
+└──────────────────────┴────────────────────────────────────────┘
 ```
 
 ### Tarjeta de dron
 
-| Botón     | Función                                                |
-|-----------|--------------------------------------------------------|
-| `CONN`    | Conecta al dron (Real o Fake según el dropdown)        |
-| `↑`       | Despegar a la altura del campo ALTURA + offset por slot|
-| `↓`       | Aterrizar                                              |
-| `↩ HOME`  | Volver al origen (0,0) con A\* esquivando obstáculos   |
+| Botón     | Función                                                 |
+|-----------|-------------------------------------------------------- |
+| `CONN`    | Conecta al dron (Real o Fake según el dropdown)         |
+| `↑`       | Despegar a la altura del campo ALTURA + offset por slot |
+| `↓`       | Aterrizar                                               |
+| `↩ HOME`  | Volver al origen (0,0) con A\* esquivando obstáculos    |
 | `✎`       | Editar pose (x, y, z, heading). En suelo: declara pose inicial. En aire: navega allí. |
 | `SIM`     | Simular detección (para testing convergencia)          |
 
 ### Mapa
 
 | Acción                          | Resultado                       |
-|----------------------------------|---------------------------------|
+|----------------------------------|--------------------------------|
 | Rueda del ratón                 | Zoom (centrado en el cursor)    |
 | Click derecho + arrastrar       | Pan                             |
 | Click sobre un triángulo        | Abre PoseDialog del dron        |
