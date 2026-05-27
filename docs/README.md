@@ -11,7 +11,7 @@ Proyecto de la asignatura **Projecte de Drons**
   navegan hacia él.
 - **Pathfinding A\*** sobre grafo de visibilidad para evitar obstáculos.
 - **Return to Home** directo con esquiva de obstáculos.
-- **Seguridad 3D**: separación vertical determinista entre los drones  por nombre (alpha más
+- **Seguridad 3D**: separación vertical  entre los drones  por nombre (alpha estará más
   alto, delta más bajo).
 - **Modo distribuido**: dos PCs pueden compartir flota mediante MQTT.
 
@@ -276,8 +276,8 @@ Tello viejo que no soporta station mode).
 ## Limitaciones conocidas
 
 - **Sin GPS ni odometría XY**: el Tello no tiene posicionamiento absoluto.
-  Toda la posición es **dead-reckoning** (integrar los comandos enviados).
-  Tras varios giros la posición real diverge de la estimada.
+  Toda la posición es **dead-reckoning** (es decir el dron irá integrando y calculando su posición con los comandos enviados).
+  Tras varios giros la posición real diverge ligeramente de la estimada acumulando error.
 - **A\* es 2D**: los obstáculos son segmentos en el plano. No hay
   obstáculos volumétricos ni alturas (toda evasión es horizontal o
   ajuste de altitud para drones).
